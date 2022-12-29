@@ -2,8 +2,8 @@
 let losAngelesElement = document.querySelector("#los-angeles");
 let losAngelesDateElement = losAngelesElement.querySelector(".date");
 let losAngelesTimeElement = losAngelesElement.querySelector(".time");
+
 losAngelesDateElement.innerHTML = moment().format("MMMM Do YYYY");
-losAngelesTimeElement.innerHTML = "1:48:15 <small> AM </small>";
 
 //Sydney
 let sydneyElement = document.querySelector("#sydney");
