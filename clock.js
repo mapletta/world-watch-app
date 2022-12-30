@@ -2,12 +2,18 @@
 let losAngelesElement = document.querySelector("#los-angeles");
 let losAngelesDateElement = losAngelesElement.querySelector(".date");
 let losAngelesTimeElement = losAngelesElement.querySelector(".time");
+let losAngelesTime = moment().tz("America/Los_Angeles");
 
-losAngelesDateElement.innerHTML = moment().format("MMMM Do YYYY");
+losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do YYYY");
+losAngelesTimeElement.innerHTML = losAngelesTime.format(
+  "h:mm:ss [<small>] A[</small>]"
+);
 
-//Sydney
-let sydneyElement = document.querySelector("#sydney");
-let sydneyDateElement = sydneyElement.querySelector(".date");
-let sydneyTimeElement = sydneyElement.querySelector(".time");
-sydneyDateElement.innerHTML = moment().format("MMMM Do YYYY");
-sydneyTimeElement.innerHTML = "1:48:15 <small> AM </small>";
+//Rome
+let romeElement = document.querySelector("#rome");
+let romeDateElement = romeElement.querySelector(".date");
+let romeTimeElement = romeElement.querySelector(".time");
+let romeTime = moment().tz("Europe/Rome");
+
+romeDateElement.innerHTML = romeTime.format("MMMM Do YYYY");
+romeTimeElement.innerHTML = romeTime.format("h:mm:ss [<small>] A[</small>]");
