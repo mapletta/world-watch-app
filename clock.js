@@ -24,7 +24,20 @@ function updateTime() {
       "h:mm:ss [<small>] A[</small>]"
     );
   }
+  //Calgary
+  let calgaryElement = document.querySelector("#calgary");
+  if (calgaryElement) {
+    let calgaryDateElement = calgaryElement.querySelector(".date");
+    let calgaryTimeElement = calgaryElement.querySelector(".time");
+    let calgaryTime = moment().tz("Canada/Mountain");
+
+    calgaryDateElement.innerHTML = calgaryTime.format("MMMM Do YYYY");
+    calgaryTimeElement.innerHTML = calgaryTime.format(
+      "h:mm:ss [<small>] A[</small>]"
+    );
+  }
 }
+
 function updateCity(event) {
   let cityTimeZone = event.target.value;
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
